@@ -1,14 +1,15 @@
 <div class="container">
   <h2>Listado de héroes</h2>
 
-  <div *ngIf="deletedHero" class="deleted-hero">
+  <div *ngIf="deletedHero; else nothingWasDeleted">
     <h3>Héroe eliminado <small class="text-danger">{{ deletedHero }}</small></h3>
   </div>
-  <div *ngIf="!deletedHero" class="not-deleted-hero">
+  <ng-template #nothingWasDeleted>
     <h3>No ha eliminado ningun héroe</h3>
-  </div>
+  </ng-template>
 
   <button
+    *ngIf="heroNames.length > 0"
     (click)="removeLastHero()"
     class="btn btn-outline-danger"
   >
