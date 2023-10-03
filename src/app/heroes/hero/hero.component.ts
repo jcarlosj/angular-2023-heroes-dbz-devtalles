@@ -29,4 +29,10 @@ export class HeroComponent {
     this.age = 45;
   }
 
+  resetData(): void {
+    this.name = 'Peter Parker';
+    this.alterego = 'Spiderman';
+    this.age = 27;
+  }
+
 }

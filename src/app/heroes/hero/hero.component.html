@@ -15,13 +15,19 @@
   </dl>
   <div class="d-flex gap-2">
     <button
+      *ngIf="alterego !== 'Hulk'"
       class="btn btn-primary"
       (click)="changeHero()"
     >Cambiar nombre</button>
     <button
+      *ngIf="age !== 45"
       class="btn btn-primary"
       (click)="changeAge()"
     >Cambiar edad</button>
+    <button
+      class="btn btn-primary"
+      (click)="resetData()"
+    >Reiniciar</button>
   </div>
 
 </div>
