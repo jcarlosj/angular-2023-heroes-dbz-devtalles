@@ -1,1 +1,10 @@
-<p>hero-list works!</p>
+<div class="container">
+  <h2>Listado de héroes</h2>
+
+  <ul class="list-group">
+    <li
+      *ngFor="let heroName of heroNames"
+      class="list-group-item"
+    >{{ heroName }}</li>
+  </ul>
+</div>

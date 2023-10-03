@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./hero-list.component.css']
 })
 export class HeroListComponent {
-
+  public heroNames: string[] = [ 'Spideman', 'Hulk', 'Ironman', 'She Hulk', 'Capitan Marvel' ];
 }
