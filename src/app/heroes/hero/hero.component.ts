@@ -17,7 +17,16 @@ export class HeroComponent {
 
   /** Methods */
   getHeroDescription(): string {
-    return `Tu amigable vecino, ${ this.alterego }`;
+    return `${ this.alterego }, ${ this.age }`;
+  }
+
+  changeHero(): void {
+    this.name = 'Robert Bruce Banner';
+    this.alterego = 'Hulk';
+  }
+
+  changeAge(): void {
+    this.age = 45;
   }
 
 }
