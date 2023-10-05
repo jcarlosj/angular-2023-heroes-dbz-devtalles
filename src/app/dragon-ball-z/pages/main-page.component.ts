@@ -15,5 +15,9 @@ export class MainPageComponent {
     { name: 'Piccolo', power: 6000 }
   ];
 
-
+  onNewCharacter( character: Character ): void {
+    console.group( 'MainPageComponent' );
+    console.log( character );
+    console.groupEnd();
+  }
 }

@@ -1,5 +1,7 @@
 <h3>Agregar personaje</h3>
-<form>
+<form
+  (ngSubmit)="emitCharacter()"
+>
   <div class="mb-3">
     <label for="name" class="form-label">Nombre personaje</label>
     <input
@@ -26,7 +28,6 @@
     <button
       class="btn btn-primary"
       type="submit"
-      (click)="emitCharacter()"
     >Agregar</button>
   </div>
 
