@@ -16,8 +16,10 @@ export class MainPageComponent {
   ];
 
   onNewCharacter( character: Character ): void {
-    console.group( 'MainPageComponent' );
-    console.log( character );
-    console.groupEnd();
+    // console.group( 'MainPageComponent' );
+    // console.log( character );
+    // console.groupEnd();
+
+    this.characters.push( character );
   }
 }

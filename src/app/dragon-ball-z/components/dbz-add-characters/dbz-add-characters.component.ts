@@ -17,10 +17,9 @@ export class DbzAddCharactersComponent {
   };
 
   emitCharacter(): void {
-
-    console.group( 'DbzAddCharactersComponent' );
-    console.log( this.character );
-    console.groupEnd();
+    // console.group( 'DbzAddCharactersComponent' );
+    // console.log( this.character );
+    // console.groupEnd();
 
     if( this.character.name.length === 0 )
       return;
