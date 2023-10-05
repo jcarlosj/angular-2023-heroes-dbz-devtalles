@@ -2,13 +2,33 @@
 <form>
   <div class="mb-3">
     <label for="name" class="form-label">Nombre personaje</label>
-    <input type="text" class="form-control" id="name" placeholder="Ej: Vegeta">
+    <input
+      type="text"
+      class="form-control"
+      id="name"
+      placeholder="Ej: Vegeta"
+      name="name"
+      [(ngModel)]="character.name"
+    >
   </div>
   <div class="mb-3">
     <label for="power" class="form-label">Poder</label>
-    <input type="number" class="form-control" id="power" placeholder="Ej: 400">
+    <input
+      type="number"
+      class="form-control"
+      id="power"
+      placeholder="Ej: 400"
+      name="power"
+      [(ngModel)]="character.power"
+    >
   </div>
   <div class="mb-3">
-    <button class="btn btn-primary" type="submit">Agregar</button>
+    <button
+      class="btn btn-primary"
+      type="submit"
+      (click)="emitCharacter()"
+    >Agregar</button>
   </div>
+
+  <pre>{{ character | json }}</pre>
 </form>
