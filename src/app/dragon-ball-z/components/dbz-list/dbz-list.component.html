@@ -3,12 +3,12 @@
   <li
     *ngFor="
       let character of characterList;
-      let i = index;
-      let isFirst = first;
-      let isLast = last;
-      let isEven = even;
-      let isOdd = odd;
-      let quantity = count;
+      index as i;
+      first as isFirst;
+      last as isLast;
+      even as isEven;
+      odd as isOdd;
+      count as quantity;
     "
     class="list-group-item"
   >
