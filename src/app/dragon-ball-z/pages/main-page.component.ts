@@ -22,4 +22,8 @@ export class MainPageComponent {
 
     this.characters.push( character );
   }
+
+  onDeleteCharacterById( id: number ): void {
+    this.characters.splice( id, 1 );
+  }
 }

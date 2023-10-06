@@ -10,18 +10,18 @@
       odd as isOdd;
       count as quantity;
     "
-    class="list-group-item"
+    class="list-group-item d-flex justify-content-between"
     [ngClass]="{
       'list-group-item-info': isEven,
       'list-group-item-dark': isLast
     }"
   >
-    <!-- <p> -->
+    <div>
       <span class="text-primary">{{ i + 1 }}. </span>
       <span>{{ character.name }} - </span>
       <strong>Power: </strong>
       <span>{{ character.power }}</span>
-    <!-- </p> -->
+    </div>
     <!-- <ul>
       <li>Total indice: {{ i }}</li>
       <li>Total indices: {{ quantity }}</li>
@@ -30,5 +30,9 @@
       <li>Es un elemento par: {{ isEven }}</li>
       <li>Es un elemento impar: {{ isOdd }}</li>
     </ul> -->
+    <button
+      (click)="onDeleteCharacter( i )"
+      class="btn btn-danger"
+    >x</button>
   </li>
 </ul>
