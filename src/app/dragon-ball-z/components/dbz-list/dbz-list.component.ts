@@ -10,15 +10,15 @@ export class DbzListComponent {
 
   @Input()
   public characterList: Character[] = [
-    { name: 'Trunks', power: 10 }
+    // { id: '', name: 'Trunks', power: 10 }
   ];
 
   @Output()
-  public onDeleteId: EventEmitter<number> = new EventEmitter();
+  public onDeleteId: EventEmitter<string> = new EventEmitter();
 
-  onDeleteCharacter( index: number ): void {
-    console.log({ index });
+  onDeleteCharacter( id: string | undefined ): void {
+    console.log({ id });
 
-    this.onDeleteId.emit( index );
+    this.onDeleteId.emit( id );
   }
 }
