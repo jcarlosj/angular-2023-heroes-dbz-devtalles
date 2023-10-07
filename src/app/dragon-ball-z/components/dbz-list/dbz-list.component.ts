@@ -16,7 +16,10 @@ export class DbzListComponent {
   @Output()
   public onDeleteId: EventEmitter<string> = new EventEmitter();
 
-  onDeleteCharacter( id: string | undefined ): void {
+  onDeleteCharacter( id?: string ): void {
+
+    if( ! id )  return;
+
     console.log({ id });
 
     this.onDeleteId.emit( id );
