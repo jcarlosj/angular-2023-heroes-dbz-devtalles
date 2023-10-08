@@ -16,7 +16,7 @@ export class DragonBallZService {
     { id: uuid(), name: 'Piccolo', power: 6000 }
   ];
 
-  onNewCharacter( character: Character ): void {
+  addCharacter( character: Character ): void {
 
     const newCharacter = {
       id: uuid(),
@@ -26,11 +26,7 @@ export class DragonBallZService {
     this.characters.push( newCharacter );
   }
 
-  onDeleteCharacterByIndex( index: number ): void {
-    this.characters.splice( index, 1 );
-  }
-
-  onDeleteCharacterById( id: string ): void {
+  deleteCharacterById( id: string ): void {
     this.characters = this.characters.filter( character => character.id !== id );
   }
 }
